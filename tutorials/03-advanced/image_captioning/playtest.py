@@ -93,7 +93,7 @@ def sample(args):
         ('resnet.7.2.bn3', 'final_layer'),
     ])
     vec = torch.zeros(2048).to(device)
-    vec[3] = 100
+    vec[0] = 100
     encoder.replacement['final_layer'] = vec
 
     encoder = encoder.to(device)
